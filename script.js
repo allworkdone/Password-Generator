@@ -17,6 +17,7 @@ const symbols = '~`!@#$%^&*()_-+={[}]|:;"<,>.?/';
 let password = "";
 let passwordLength = 10;
 let checkCount = 0;
+setIndicator("#ccc");
 
 handleSlider();
 // Set strength circle color to grey
@@ -29,7 +30,7 @@ function handleSlider() {
 
 function setIndicator(color) {
     indicator.style.backgroundColor = color;
-    // shadow
+    indicator.style.boxShadow = `0px 0px 12px 1px ${color}`;
 }
 
 function getRndInteger(min, max) {
